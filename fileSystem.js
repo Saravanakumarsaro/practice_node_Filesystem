@@ -19,12 +19,12 @@ todo.createFile = (req) => {
 todo.appendFile = (req) => {
   return new Promise((resolve) => {
     let url = rootPath.join(rootPath.resolve(), req.fileName);
-    if (fs.existsSync(url)) {
+    // if (fs.existsSync(url)) {
       let temp = fs.appendFileSync(url, req.fileContent);
       resolve('file Append');
-    } else {
-      resolve('file not found');
-    }
+    // } else {
+    //   resolve('file not found');
+    // }
   });
 };
 
